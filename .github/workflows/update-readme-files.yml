@@ -1,4 +1,4 @@
-name: Update Asset or Readme Files
+name: Update Readme File
 on:
   push:
     branches:
