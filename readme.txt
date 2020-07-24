@@ -49,7 +49,7 @@ The manual installation method involves downloading the plugin and uploading it 
 
 Yes, it does. You can change the number of columns on both admin dashboards. ( site dashboard and network dashboard )
 
-Testing GitHub deployment. (please ignore)
+Testing GitHub deployment. (will remove)
 
 ## Screenshots
 
