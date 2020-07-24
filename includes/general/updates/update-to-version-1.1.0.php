@@ -13,6 +13,6 @@
 // Migrate.
 $dashboard_columns = get_option( 'dashboard_columns' );
 
-$dashboard_columns['onboarding_notice'] = false;
+$dashboard_columns['onboarding-notice'] = false;
 
 update_option( 'dashboard_columns', $dashboard_columns );
