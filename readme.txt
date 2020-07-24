@@ -1,7 +1,7 @@
 # Dashboard Columns
 Contributors: PolygonThemes, EusebiuOprinoiu
 Tags: dashboard columns, screen options, dashboard, columns, widget, admin
-Stable tag: trunk
+Stable tag: 1.1.1
 Requires PHP: 7.2
 Tested up to: 5.4
 Requires at least: 5.0
