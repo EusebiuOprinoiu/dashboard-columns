@@ -23,6 +23,8 @@ With the help of Dashboard Columns you can now easily change the number of colum
 
 This plugin doesn't have an options page. Just set it and forget it!
 
+Testing GitHub deployment. (please ignore)
+
 ## Installation
 
 ### Automatic Installation
