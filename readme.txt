@@ -59,7 +59,7 @@ Yes, it does. You can change the number of columns on both admin dashboards. ( s
 ## Changelog
 
 #### Version 1.1.1
-- Fixed a bug that was causing the onboarding message appear to all users
+- Fixed a bug that was causing the onboarding message to appear to all users
 
 #### Version 1.1.0
 - Minor code refactoring
