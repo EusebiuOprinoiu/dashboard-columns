@@ -1,7 +1,7 @@
 # Dashboard Columns
 Contributors: PolygonThemes, EusebiuOprinoiu
 Tags: dashboard columns, screen options, dashboard, columns, widget, admin
-Stable tag: trunk
+Stable tag: 1.1.1
 Requires PHP: 7.2
 Tested up to: 5.4
 Requires at least: 5.0
@@ -22,6 +22,8 @@ With the help of Dashboard Columns you can now easily change the number of colum
 - On small screens everything is displayed using 1 column
 
 This plugin doesn't have an options page. Just set it and forget it!
+
+Testing deployment from GitHub. (please ignore)
 
 ## Installation
 
