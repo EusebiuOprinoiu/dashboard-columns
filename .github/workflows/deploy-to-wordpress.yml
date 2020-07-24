@@ -1,5 +1,3 @@
-# Deploy plugin to WordPress when a new release is created.
-
 name: Deploy to WordPress
 on:
   push:
