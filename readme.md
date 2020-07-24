@@ -8,4 +8,4 @@ With the help of Dashboard Columns you can now easily change the number of colum
 - On medium screens you have the option to choose between 1 or 2 columns
 - On small screens everything is displayed using 1 column
 
-The plugin has no options page. Just set it and forget it!
+This plugin doesn't have an options page. Just set it and forget it!
