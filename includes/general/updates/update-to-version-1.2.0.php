@@ -11,3 +11,14 @@
 
 
 // Migrate.
+$dashboard_columns = get_option( 'dashboard_columns' );
+
+if ( isset( $dashboard_columns['plugin-version'] ) ) {
+	unset( $dashboard_columns['plugin-version'] );
+}
+
+if ( isset( $dashboard_columns['last-updated-version'] ) ) {
+	unset( $dashboard_columns['last-updated-version'] );
+}
+
+update_option( 'dashboard_columns', $dashboard_columns );

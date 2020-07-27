@@ -61,6 +61,9 @@ Testing GitHub deployment. (will remove)
 
 ## Changelog
 
+#### Version 1.2.0
+- Minor code refactoring
+
 #### Version 1.1.1
 - Fixed a bug that was causing the onboarding message to appear to all users
 

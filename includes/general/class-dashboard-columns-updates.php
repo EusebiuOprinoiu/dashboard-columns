@@ -25,7 +25,7 @@ class Dashboard_Columns_Updates {
 	 *
 	 * Compare the current plugin version with the one stored in the options table
 	 * and migrate recursively if needed after a plugin update. The migration code for each
-	 * version is stored in individual files and it's triggered only if the 'last-updated-version'
+	 * version is stored in individual files and it's triggered only if the 'db-version'
 	 * parameter is older than versions where changes have been made.
 	 *
 	 * @since 1.0.0
@@ -33,35 +33,49 @@ class Dashboard_Columns_Updates {
 	public function maybe_run_recursive_updates() {
 		$dashboard_columns = get_option( 'dashboard_columns' );
 
-		if ( ! isset( $dashboard_columns['plugin-version'] ) ) {
-			$dashboard_columns['plugin-version'] = DASHBOARD_COLUMNS_VERSION;
+		// Migrate from 'plugin-version' key to 'version'.
+		if ( isset( $dashboard_columns['plugin-version'] ) ) {
+			$dashboard_columns['version'] = $dashboard_columns['plugin-version'];
 			update_option( 'dashboard_columns', $dashboard_columns );
 		}
 
-		if ( ! isset( $dashboard_columns['last-updated-version'] ) ) {
-			$dashboard_columns['last-updated-version'] = DASHBOARD_COLUMNS_VERSION;
+		// Migrate from 'last-updated-version' key to 'db-version'.
+		if ( isset( $dashboard_columns['last-updated-version'] ) ) {
+			$dashboard_columns['db-version'] = $dashboard_columns['last-updated-version'];
 			update_option( 'dashboard_columns', $dashboard_columns );
 		}
 
-		if ( version_compare( DASHBOARD_COLUMNS_VERSION, $dashboard_columns['plugin-version'] ) > 0 ) {
+
+
+
+
+		if ( ! isset( $dashboard_columns['version'] ) ) {
+			$dashboard_columns['version'] = DASHBOARD_COLUMNS_VERSION;
+			update_option( 'dashboard_columns', $dashboard_columns );
+		}
+
+		if ( ! isset( $dashboard_columns['db-version'] ) ) {
+			$dashboard_columns['db-version'] = DASHBOARD_COLUMNS_VERSION;
+			update_option( 'dashboard_columns', $dashboard_columns );
+		}
+
+		if ( version_compare( DASHBOARD_COLUMNS_VERSION, $dashboard_columns['version'] ) > 0 ) {
 			// Migrate options to version 1.1.0.
-			if ( version_compare( $dashboard_columns['last-updated-version'], '1.1.0' ) < 0 ) {
+			if ( version_compare( $dashboard_columns['db-version'], '1.1.0' ) < 0 ) {
 				require_once DASHBOARD_COLUMNS_DIR_PATH . 'includes/general/updates/update-to-version-1.1.0.php';
-				$dashboard_columns['last-updated-version'] = '1.1.0';
+				$dashboard_columns['db-version'] = '1.1.0';
 			}
 
-			/* phpcs:ignore
 			// Migrate options to version 1.2.0.
-			if ( version_compare( $dashboard_columns['last-updated-version'], '1.2.0' ) < 0 ) {
+			if ( version_compare( $dashboard_columns['db-version'], '1.2.0' ) < 0 ) {
 				require_once DASHBOARD_COLUMNS_DIR_PATH . 'includes/general/updates/update-to-version-1.2.0.php';
-				$dashboard_columns['last-updated-version'] = '1.2.0';
+				$dashboard_columns['db-version'] = '1.2.0';
 			}
-			*/
 
 
 
 			// Update plugin version.
-			$dashboard_columns['plugin-version'] = DASHBOARD_COLUMNS_VERSION;
+			$dashboard_columns['version'] = DASHBOARD_COLUMNS_VERSION;
 
 			// Update plugin options.
 			update_option( 'dashboard_columns', $dashboard_columns );

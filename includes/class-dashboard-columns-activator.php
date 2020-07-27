@@ -69,9 +69,9 @@ class Dashboard_Columns_Activator {
 		// Create plugin options if not available.
 		if ( ! get_option( 'dashboard_columns' ) ) {
 			$dashboard_columns = array(
-				'plugin-version'       => DASHBOARD_COLUMNS_VERSION,
-				'last-updated-version' => DASHBOARD_COLUMNS_VERSION,
-				'onboarding-notice'    => true,
+				'version'           => DASHBOARD_COLUMNS_VERSION,
+				'db-version'        => DASHBOARD_COLUMNS_VERSION,
+				'onboarding-notice' => true,
 			);
 
 			add_option( 'dashboard_columns', $dashboard_columns );
