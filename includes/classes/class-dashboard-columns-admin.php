@@ -6,6 +6,8 @@
  * @package Dashboard_Columns
  */
 
+defined( 'ABSPATH' ) || exit;
+
 
 
 
@@ -21,6 +23,22 @@
 class Dashboard_Columns_Admin {
 
 	/**
+	 * Hook into actions and filters.
+	 *
+	 * @since 1.0.0
+	 */
+	public function init() {
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+		add_action( 'network_admin_notices', array( $this, 'onboarding_notice' ) );
+		add_action( 'admin_notices', array( $this, 'onboarding_notice' ) );
+		add_action( 'load-index.php', array( $this, 'add_columns' ) );
+	}
+
+
+
+
+
+	/**
 	 * Register and enqueue stylesheets for the admin area.
 	 *
 	 * @since 1.0.0
@@ -28,7 +46,7 @@ class Dashboard_Columns_Admin {
 	 */
 	public function enqueue_styles( $hook ) {
 		if ( $hook === 'index.php' ) {
-			wp_register_style( 'dashboard-columns', plugins_url( 'assets/stylesheets/dashboard-columns-admin.css', DASHBOARD_COLUMNS_MAIN_FILE ), false, DASHBOARD_COLUMNS_VERSION, 'all' );
+			wp_register_style( 'dashboard-columns', plugins_url( 'assets/stylesheets/dashboard-columns-admin.css', DASHBOARD_COLUMNS_FILE ), false, DASHBOARD_COLUMNS_VERSION, 'all' );
 			wp_enqueue_style( 'dashboard-columns' );
 		}
 	}

@@ -6,6 +6,8 @@
  * @package Dashboard_Columns
  */
 
+defined( 'ABSPATH' ) || exit;
+
 
 
 

@@ -6,16 +6,7 @@
  * @package Dashboard_Columns
  */
 
-
-
-
-
-/**
- * Prevent unauthorized access.
- */
-if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	exit;
-}
+defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
 
 

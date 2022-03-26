@@ -6,6 +6,8 @@
  * @package Dashboard_Columns
  */
 
+defined( 'ABSPATH' ) || exit;
+
 
 
 
@@ -21,26 +23,27 @@
 class Dashboard_Columns_Textdomain {
 
 	/**
-	 * Load plugin text-domain.
-	 *
-	 * Load the plugin text-domain and define the location of our translation files.
-	 * See examples below:
-	 *
-	 * - Global languages folder: wp-content/languages/plugins/dashboard-columns-en_US.mo
-	 * - Local languages folder: wp-content/plugins/dashboard-columns/languages/dashboard-columns-en_US.mo
-	 *
-	 * If no files are found in the global languages folder the plugin uses the files available in the
-	 * local folder.
+	 * Hook into actions and filters.
 	 *
 	 * @since 1.0.0
 	 */
-	public function load_plugin_textdomain() {
-		$locale = apply_filters( 'locale', get_locale(), DASHBOARD_COLUMNS_NAME );
+	public function init() {
+		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
+	}
 
-		// Load textdomain from the global languages folder.
-		load_textdomain( DASHBOARD_COLUMNS_NAME, trailingslashit( WP_LANG_DIR ) . 'plugins/' . DASHBOARD_COLUMNS_NAME . '-' . $locale . '.mo' );
 
-		// Load textdomain from the local languages folder.
-		load_plugin_textdomain( DASHBOARD_COLUMNS_NAME, false, plugin_basename( DASHBOARD_COLUMNS_DIR_PATH ) . '/languages/' );
+
+
+
+	/**
+	 * Load the plugin textdomain.
+	 *
+	 * The plugin tries to load the files from the global /languages/ folder first.
+	 * If it can't find any, it will load the files from the local /languages/ folder.
+	 *
+	 * @since 1.0.0
+	 */
+	public function load_textdomain() {
+		load_plugin_textdomain( 'dashboard-columns', false, plugin_basename( DASHBOARD_COLUMNS_DIR ) . '/languages/' );
 	}
 }

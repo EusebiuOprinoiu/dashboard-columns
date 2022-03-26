@@ -6,6 +6,8 @@
  * @package Dashboard_Columns
  */
 
+defined( 'ABSPATH' ) || exit;
+
 
 
 
@@ -20,10 +22,10 @@
 class Dashboard_Columns_Activator {
 
 	/**
-	 * Run the activation script.
+	 * Run activation script.
 	 *
 	 * Run the activation script for the current site if we are on a standard
-	 * WordPress install or for all sites if we are on WordPress Multisite
+	 * WordPress install, or for all sites if we are on WordPress Multisite
 	 * and the plugin is network activated.
 	 *
 	 * @since 1.0.0
