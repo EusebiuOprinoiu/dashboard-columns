@@ -60,9 +60,9 @@ Yes, it does. You can change the number of columns on both admin dashboards. ( s
 ## Changelog
 
 #### Version 1.3.0
+- CSS improvements in the admin dashboard
 - Minor code refactoring
 - Language files updated
-- CSS improvements for dashboard widgets
 
 #### Version 1.2.0
 - Minor code refactoring
