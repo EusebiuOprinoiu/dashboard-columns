@@ -1,6 +1,7 @@
 #### Version 1.3.0
 - Minor code refactoring
 - Language files updated
+- CSS improvements for dashboard widgets
 
 #### Version 1.2.0
 - Minor code refactoring
