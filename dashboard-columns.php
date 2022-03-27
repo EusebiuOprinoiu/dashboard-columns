@@ -33,9 +33,6 @@ defined( 'ABSPATH' ) || exit;
 
 
 
-/**
- * Define plugin constants.
- */
 define( 'DASHBOARD_COLUMNS_VERSION', '1.3.0' );
 define( 'DASHBOARD_COLUMNS_NAME', 'Dashboard Columns' );
 define( 'DASHBOARD_COLUMNS_SLUG', 'dashboard-columns' );
