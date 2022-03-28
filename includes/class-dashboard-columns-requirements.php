@@ -117,7 +117,7 @@ class Dashboard_Columns_Requirements {
 					</p>
 					<p>
 						<?php // phpcs:ignore
-							printf( esc_html__( '%1$s doesn\'t run run on PHP versions older than %2$s. You are running on version %3$s which has serious security and performance issues.', 'dashboard-columns' ), DASHBOARD_COLUMNS_NAME, DASHBOARD_COLUMNS_MIN_PHP_VERSION, PHP_VERSION );
+							printf( esc_html__( 'Dashboard Columns doesn\'t run run on PHP versions older than %1$s. You are running on version %2$s which has serious security and performance issues.', 'dashboard-columns' ), DASHBOARD_COLUMNS_MIN_PHP_VERSION, PHP_VERSION );
 						?>
 						<br>
 						<?php // phpcs:ignore

@@ -45,8 +45,8 @@ class Dashboard_Columns {
 	 * @access private
 	 */
 	private function includes() {
-		require_once DASHBOARD_COLUMNS_DIR . 'includes/classes/class-dashboard-columns-admin.php';
-		require_once DASHBOARD_COLUMNS_DIR . 'includes/classes/class-dashboard-columns-updates.php';
+		require_once DASHBOARD_COLUMNS_DIR_PATH . 'includes/classes/class-dashboard-columns-admin.php';
+		require_once DASHBOARD_COLUMNS_DIR_PATH . 'includes/classes/class-dashboard-columns-updates.php';
 	}
 
 

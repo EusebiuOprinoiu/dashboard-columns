@@ -44,6 +44,6 @@ class Dashboard_Columns_Textdomain {
 	 * @since 1.0.0
 	 */
 	public function load_textdomain() {
-		load_plugin_textdomain( 'dashboard-columns', false, plugin_basename( DASHBOARD_COLUMNS_DIR ) . '/languages/' );
+		load_plugin_textdomain( 'dashboard-columns', false, plugin_basename( DASHBOARD_COLUMNS_DIR_PATH ) . '/languages/' );
 	}
 }

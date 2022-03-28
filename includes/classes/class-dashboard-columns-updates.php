@@ -78,13 +78,13 @@ class Dashboard_Columns_Updates {
 		if ( version_compare( DASHBOARD_COLUMNS_VERSION, $dashboard_columns['version'] ) > 0 ) {
 			// Migrate options to version 1.1.0.
 			if ( version_compare( $dashboard_columns['db-version'], '1.1.0' ) < 0 ) {
-				require_once DASHBOARD_COLUMNS_DIR . 'includes/classes/updates/update-to-version-1.1.0.php';
+				require_once DASHBOARD_COLUMNS_DIR_PATH . 'includes/classes/updates/update-to-version-1.1.0.php';
 				$dashboard_columns['db-version'] = '1.1.0';
 			}
 
 			// Migrate options to version 1.2.0.
 			if ( version_compare( $dashboard_columns['db-version'], '1.2.0' ) < 0 ) {
-				require_once DASHBOARD_COLUMNS_DIR . 'includes/classes/updates/update-to-version-1.2.0.php';
+				require_once DASHBOARD_COLUMNS_DIR_PATH . 'includes/classes/updates/update-to-version-1.2.0.php';
 				$dashboard_columns['db-version'] = '1.2.0';
 			}
 
@@ -121,7 +121,7 @@ class Dashboard_Columns_Updates {
 			if ( is_plugin_active_for_network( plugin_basename( DASHBOARD_COLUMNS_FILE ) ) ) {
 				switch_to_blog( $blog_id );
 
-				require_once DASHBOARD_COLUMNS_DIR . 'includes/class-dashboard-columns-activator.php';
+				require_once DASHBOARD_COLUMNS_DIR_PATH . 'includes/class-dashboard-columns-activator.php';
 				Dashboard_Columns_Activator::run_activation_script();
 
 				restore_current_blog();
