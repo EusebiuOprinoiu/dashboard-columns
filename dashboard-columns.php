@@ -100,4 +100,4 @@ function run_dashboard_columns() {
 		$plugin->run();
 	}
 }
-run_dashboard_columns();
+add_action( 'plugins_loaded', 'run_dashboard_columns' );
