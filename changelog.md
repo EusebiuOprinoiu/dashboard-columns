@@ -1,3 +1,6 @@
+#### Version 1.3.1
+- Minor improvements to admin notices
+
 #### Version 1.3.0
 - CSS improvements in the admin dashboard
 - Minor code refactoring

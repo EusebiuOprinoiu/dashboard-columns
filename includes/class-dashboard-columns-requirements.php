@@ -126,7 +126,7 @@ class Dashboard_Columns_Requirements {
 					</p>
 					<?php if ( $disable_button ) { ?>
 						<p>
-							<a href="<?php echo esc_url( wp_nonce_url( '?disable_dashboard_columns=true', 'disable-dashboard-columns' ) ); ?>">
+							<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'disable_dashboard_columns', 'true' ), 'disable-dashboard-columns' ) ); ?>">
 								<b><?php echo esc_html__( 'Disable Plugin', 'dashboard-columns' ); ?></b>
 							</a>
 						</p>

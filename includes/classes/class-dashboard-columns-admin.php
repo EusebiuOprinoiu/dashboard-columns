@@ -119,7 +119,9 @@ class Dashboard_Columns_Admin {
 							<?php echo esc_html__( 'The plugin has no options page, in case you\'re looking for one.', 'dashboard-columns' ); ?>
 						</p>
 						<p>
-							<a href="?dashboard_columns_hide_notice=true"><b><?php echo esc_html__( 'Hide Notice', 'dashboard-columns' ); ?></b></a>
+							<a href="<?php echo esc_url( add_query_arg( 'dashboard_columns_hide_notice', 'true' ) ); ?>">
+								<b><?php echo esc_html__( 'Hide Notice', 'dashboard-columns' ); ?></b>
+							</a>
 						</p>
 						<p></p>
 					</div>

@@ -5,7 +5,7 @@
  * Author:            Polygon Themes
  * Author URI:        https://polygonthemes.com
  * Description:       Easily change the number of dashboard columns from Screen Options.
- * Version:           1.3.0
+ * Version:           1.3.1
  * Requires PHP:      7.2
  * Requires at least: 5.0
  *
@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 
-define( 'DASHBOARD_COLUMNS_VERSION', '1.3.0' );
+define( 'DASHBOARD_COLUMNS_VERSION', '1.3.1' );
 define( 'DASHBOARD_COLUMNS_SLUG', 'dashboard-columns' );
 
 define( 'DASHBOARD_COLUMNS_FILE', __FILE__ );
