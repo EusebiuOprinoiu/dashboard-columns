@@ -7,7 +7,7 @@
  * Description:       Easily change the number of dashboard columns from Screen Options.
  * Version:           1.3.1
  * Requires PHP:      7.2
- * Requires at least: 5.0
+ * Requires at least: 5.6
  *
  * Text Domain:       dashboard-columns
  * Domain Path:       /languages/
