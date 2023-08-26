@@ -3,8 +3,8 @@ on:
   release:
     types: [published]
 jobs:
-  tag:
-    name: New release
+  deploy-plugin:
+    name: Deploy to WordPress
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
